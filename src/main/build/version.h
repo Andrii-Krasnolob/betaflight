@@ -18,12 +18,13 @@
  * If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 #pragma once
 
 #include "common/utils.h"
 
-#define FC_FIRMWARE_NAME            "Betaflight-copilot"
-#define FC_FIRMWARE_IDENTIFIER      "BTFL"
+#define FC_FIRMWARE_NAME            "Betaflight-ua"
+#define FC_FIRMWARE_IDENTIFIER      "UABT"
 #define FC_VERSION_MAJOR            4  // increment when a major release is made (big new feature, etc)
 #define FC_VERSION_MINOR            6  // increment when a minor release is made (small new feature, change etc)
 #define FC_VERSION_PATCH_LEVEL      1  // increment when a bug is fixed
