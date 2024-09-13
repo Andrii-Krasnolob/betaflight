@@ -23,7 +23,7 @@
 
 #include "common/utils.h"
 
-#define FC_FIRMWARE_NAME            "Betaflight-ua"
+#define FC_FIRMWARE_NAME            "Betaflight-UA"
 #define FC_FIRMWARE_IDENTIFIER      "UABT"
 #define FC_VERSION_MAJOR            4  // increment when a major release is made (big new feature, etc)
 #define FC_VERSION_MINOR            6  // increment when a minor release is made (small new feature, change etc)
