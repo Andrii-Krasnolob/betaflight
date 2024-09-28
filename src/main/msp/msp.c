@@ -1323,6 +1323,11 @@ case MSP_NAME:
             sbufWriteU16(dst, rcData[i]);
         }
         break;
+    case MSP_RC_RAW:
+        for (int i = 0; i < rxRuntimeState.channelCount; i++) {
+            sbufWriteU16(dst, rcOrig[i]);
+        }
+        break;
 
     case MSP_ATTITUDE:
         sbufWriteU16(dst, attitude.values.roll);
