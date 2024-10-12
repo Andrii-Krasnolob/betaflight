@@ -1128,6 +1128,11 @@ static bool mspProcessOutCommand(mspDescriptor_t srcDesc, int16_t cmdMSP, sbuf_t
 #else
             sbufWriteU16(dst, 0);
 #endif
+#ifdef USE_ACC
+            sbufWriteU16(dst, acc.dev.acc_1G);
+#else
+            sbufWriteU16(dst, 0);
+#endif
         }
         break;
 
