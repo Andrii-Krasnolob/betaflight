@@ -128,6 +128,8 @@ static timeUs_t suspendRxSignalUntil = 0;
 static uint8_t  skipRxSamples = 0;
 
 static float rcRaw[MAX_SUPPORTED_RC_CHANNEL_COUNT];     // last received raw value, as it comes
+float rcOrig[MAX_SUPPORTED_RC_CHANNEL_COUNT];     // last received original raw value, as it comes
+
 float rcData[MAX_SUPPORTED_RC_CHANNEL_COUNT];           // scaled, modified, checked and constrained values
 uint32_t validRxSignalTimeout[MAX_SUPPORTED_RC_CHANNEL_COUNT];
 
@@ -682,6 +684,7 @@ static void readRxChannelsApplyRanges(void)
 
         // sample the channel
         float sample;
+        rcOrig[channel] = rxRuntimeState.rcReadRawFn(&rxRuntimeState, rawChannel);
 #if defined(USE_RX_MSP_OVERRIDE)
         if (rxConfig()->msp_override_channels_mask) {
             sample = rxMspOverrideReadRawRc(&rxRuntimeState, rxConfig(), rawChannel);
